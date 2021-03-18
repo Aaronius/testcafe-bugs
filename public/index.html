@@ -2,19 +2,19 @@
 <html lang="en">
   <head>
     <title>React App</title>
-    <script>
-      const meta = document.createElement("meta");
-      meta.httpEquiv = "Content-Security-Policy";
-      meta.content = `default-src 'self';
-                  script-src 'self' 'unsafe-inline';
-                  style-src 'self' 'unsafe-inline';
-                  connect-src 'self' *.example.com;`;
-      document.head.appendChild(meta);
-      fetch("https://example.com");
-    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const iframe = document.createElement("iframe");
+        document.body.appendChild(iframe);
+
+        const iframeDoc = iframe.contentWindow.document;
+        const img = iframeDoc.createElement("img");
+        img.src = "https://cataas.com/cat/cute";
+        iframeDoc.body.appendChild(img);
+      });
+    </script>
   </body>
 </html>
