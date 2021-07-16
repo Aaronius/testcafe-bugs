@@ -12,7 +12,7 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "HOST=localhost react-scripts start",
     "build": "react-scripts build",
     "test": "testcafe chrome -L",
     "eject": "react-scripts eject"
@@ -37,6 +37,6 @@
   },
   "devDependencies": {
     "prettier": "^2.2.1",
-    "testcafe": "^1.12.0"
+    "testcafe": "^1.15.0"
   }
 }

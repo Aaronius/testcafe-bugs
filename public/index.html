@@ -3,14 +3,14 @@
   <head>
     <title>React App</title>
     <script>
-      const meta = document.createElement("meta");
-      meta.httpEquiv = "Content-Security-Policy";
-      meta.content = `default-src 'self';
-                  script-src 'self' 'unsafe-inline';
-                  style-src 'self' 'unsafe-inline';
-                  connect-src 'self' *.example.com;`;
-      document.head.appendChild(meta);
-      fetch("https://example.com");
+      fetch("https://edge.adobe.io/configs/user/edge?orderby=title", {
+        headers: {
+          "Authorization": "Bearer redacted",
+          "Content-Type": "application/json",
+          "x-api-key": "Activation-DTM",
+          "x-gw-ims-org-id": "5BFE274A5F6980A50A495C08@AdobeOrg"
+        }
+      });
     </script>
   </head>
   <body>
